@@ -1,0 +1,13 @@
+[options]
+mode prove
+
+[engines]
+smtbmc
+
+[script]
+read -formal dummyios.sv isunknown_checker.sv
+prep -top dummyios -flatten
+
+[files]
+dummyios.sv
+properties.v

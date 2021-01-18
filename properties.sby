@@ -5,10 +5,10 @@ mode prove
 smtbmc
 
 [script]
-read -formal wrapper.v seven_segment_seconds.v
-prep -top wrapper
+read -formal wrapper.v isunknown_checker.sv seven_segment_seconds.v
+prep -top wrapper -flatten
 
 [files]
 wrapper.v
-properties.v
+isunknown_checker.sv
 seven_segment_seconds/seven_segment_seconds.v
